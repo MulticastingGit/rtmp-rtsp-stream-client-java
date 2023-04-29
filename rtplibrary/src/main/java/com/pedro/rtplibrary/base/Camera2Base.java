@@ -1094,4 +1094,8 @@ public abstract class Camera2Base implements GetAacData, GetVideoData, GetMicrop
   public abstract void setLogs(boolean enable);
 
   public abstract void setCheckServerAlive(boolean enable);
+
+  public Camera2ApiManager getCameraManager() {
+    return cameraManager;
+  }
 }
