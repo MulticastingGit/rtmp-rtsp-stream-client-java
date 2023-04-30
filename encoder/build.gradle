@@ -2,23 +2,24 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-  compileSdkVersion 33
+    compileSdkVersion 33
 
-  defaultConfig {
-    minSdkVersion 16
-    targetSdkVersion 33
-    versionCode version_code
-    versionName version_name
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
-      consumerProguardFiles 'proguard-rules.pro'
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 33
+        versionCode version_code
+        versionName version_name
     }
-  }
+    buildTypes {
+        release {
+            minifyEnabled false
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+
 }
 
 dependencies {
-  api 'androidx.annotation:annotation:1.6.0'
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    api 'androidx.annotation:annotation:1.6.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }

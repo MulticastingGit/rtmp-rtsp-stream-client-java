@@ -1,33 +1,32 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-  ext.kotlin_version = '1.8.0'
-  ext.library_group = "com.github.multicasting.rtmp"
-  ext.version_code = 222
-  ext.version_name = "2.2.4"
+    ext.kotlin_version = '1.8.10'
+    ext.version_code = 222
+    ext.version_name = "multicasting-2.2.4"
 
-  repositories {
-    google()
-    mavenCentral()
-    maven { url 'https://jitpack.io' }
-  }
-  dependencies {
-    classpath 'com.android.tools.build:gradle:7.3.1'
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    // NOTE: Do not place your application dependencies here; they belong
-    // in the individual module build.gradle files
-  }
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
 }
 
 allprojects {
-  repositories {
-    google()
-    mavenCentral()
-    maven { url 'https://jitpack.io' }
-  }
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
 }
 
 task clean(type: Delete) {
-  delete rootProject.buildDir
+    delete rootProject.buildDir
 }
 

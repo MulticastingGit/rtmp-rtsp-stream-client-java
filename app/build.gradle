@@ -2,30 +2,30 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-  compileSdkVersion 33
+    compileSdkVersion 33
 
-  defaultConfig {
-    applicationId "com.pedro.rtpstreamer"
-    minSdkVersion 16
-    targetSdkVersion 33
-    versionCode version_code
-    versionName version_name
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    defaultConfig {
+        applicationId "com.pedro.rtpstreamer"
+        minSdkVersion 16
+        targetSdkVersion 33
+        versionCode version_code
+        versionName version_name
     }
-  }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 
-  buildFeatures {
-    viewBinding true
-  }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
-  implementation project(':rtplibrary')
-  implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-  implementation 'com.google.android.material:material:1.8.0'
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation project(':rtplibrary')
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }

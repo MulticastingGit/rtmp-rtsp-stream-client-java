@@ -2,27 +2,24 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-  compileSdkVersion 33
+    compileSdkVersion 33
 
-  defaultConfig {
-    minSdkVersion 16
-    targetSdkVersion 33
-    versionCode version_code
-    versionName version_name
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 33
+        versionCode version_code
+        versionName version_name
     }
-  }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
 
-  publishing {
-    singleVariant("release")
-  }
 }
 
 dependencies {
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-  testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
-  testImplementation 'junit:junit:4.13.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    testImplementation 'junit:junit:4.13.2'
 }
